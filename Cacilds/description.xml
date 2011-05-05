@@ -68,7 +68,7 @@
 		<!-- IF WRAPPER -->
 		<folder src="bin" dest="bin" recursive="true" process="true" if="${wrapper}"/>
 
-		<file src="swc/cacilds_v01.swc" dest="swc/cacilds_v01.swc" />
+		<file src="swc/cacilds_v01.swc" dest="swc/cacilds_v02.swc" />
 		<file src="swc/greensock.swc" dest="swc/greensock.swc" />
 		<file src="swc/robotlegs-framework-v1.4.0.swc" dest="swc/robotlegs-framework-v1.4.0.swc" />
 		<file src="swc/SWFAddress.swc" dest="swc/SWFAddress.swc" />
