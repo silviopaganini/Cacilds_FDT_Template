@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:projectTemplate xmlns:tns="http://fdt.powerflasher.com/ProjectTemplate"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://fdt.powerflasher.com/ProjectTemplate ../../projectTemplate.xsd">
+	<name>Cacilds</name>
+	<version>1.0</version>
+	<projectType>AS 3</projectType>
+	<variables>
+		<primaryGroup label="Options">
+			
+			<group label="Package Name">
+				<variable name="domain" label="Domain"
+					default="domain" type="string" />
+				<variable name="clientFolderName" label="Client Name"
+					default="clientname" type="string" />
+				<variable name="projectFolderName" label="Project Name"
+					default="projectname" type="string" />
+			</group>
+			
+			<group label="Movie Properties">
+				<variable name="color" label="BG Color" default="#FFFFFF" type="string" />
+				<variable name="fps" label="Frame Rate" default="31" type="string" />
+				<variable name="width" label="Width" default="950" type="string" />
+				<variable name="height" label="Height" default="550" type="string" />
+			</group>
+			
+			<group label="HTML Wrapper">
+				
+				<variable name="wrapper" label="Create HTML Wrapper" default="false" type="boolean" />
+				
+				<group label="More..." style="popupButton">
+				
+					<variable name="pageTitle" label="Page Title" default="Page Title" type="string" />
+					<variable name="htmlColor" label="BG Color" default="#FFFFFF" type="string" />
+					<variable name="htmlWidth" label="Width" default="100%" type="string" />
+					<variable name="htmlHeight" label="Height" default="100%" type="string" />
+				
+				</group>
+			</group>
+			
+		</primaryGroup>
+	</variables>
+	<expressions>
+		<expression name="sourceFolder" value="src" />
+		<expression name="outputFolder" value="bin" />
+		
+		<expression name="namespace" value="concat('',(${domain}),'.',(${clientFolderName}),'.',(${projectFolderName}),'')" />
+		<expression name="projectNameBuild" value="concat('',(${projectName}),'')" />
+		
+		<expression name="SWFMetaData" value="concat('[SWF(backgroundColor=&quot;',(${color}),'&quot;, frameRate=&quot;',(${fps}),'&quot;, width=&quot;',(${width}),'&quot;, height=&quot;', (${height}),'&quot;)]')" />
+		
+	</expressions>
+	<description>This template will create a MVCS project named '${projectName}' using Robotlegs, Cacilds, SWFAddress and Greensock frameworks, and the necessary ANT files to build the application${newline}</description>
+	<linkedResources></linkedResources>
+	<folders>
+		<sourceFolder>${sourceFolder}</sourceFolder>
+		<outputFolder>${outputFolder}</outputFolder>
+		<autoLibFolder>swc</autoLibFolder>
+	</folders>
+	<contentCreation processFileExtensions="as,mxml,xml,launch,html,properties">
+		
+		<!-- Always -->
+		<folder src="src/template" dest="${sourceFolder}/${domain}/${clientFolderName}/${projectFolderName}" recursive="true" process="true"/>
+		<file src="src/Main.as" dest="src/Main.as" process="true" />
+		<file src="src/FactoryClass.as" dest="src/FactoryClass.as" process="true" />
+		<folder src="build" dest="build" recursive="true" process="true"/>
+		
+		<!-- IF WRAPPER -->
+		<folder src="bin" dest="bin" recursive="true" process="true" if="${wrapper}"/>
+
+		<file src="swc/cacilds_v01.swc" dest="swc/cacilds_v01.swc" />
+		<file src="swc/greensock.swc" dest="swc/greensock.swc" />
+		<file src="swc/robotlegs-framework-v1.4.0.swc" dest="swc/robotlegs-framework-v1.4.0.swc" />
+		<file src="swc/SWFAddress.swc" dest="swc/SWFAddress.swc" />
+	</contentCreation>
+</tns:projectTemplate>

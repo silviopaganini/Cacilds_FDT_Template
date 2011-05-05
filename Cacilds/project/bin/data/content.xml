@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content 
+	xmlns:Button="cacilds.display::UIButton"
+	xmlns:Page="cacilds.display::Page"
+	xmlns:Text="cacilds.display::DynamicTFExtended"
+	>
+	
+	<areas>
+		
+		<Page:area id="area0">
+			
+			<Text:title style="Area_Title"><copy><![CDATA[WHY F-i?]]></copy></fiText:title>
+			
+			<menu>
+				<Button:button y="20" id="area0" onClick="navMacro">
+					<copy><![CDATA[WHY F-i?]]></copy>				
+				</Button:button>
+			</menu>
+				
+			<content>
+			</content>
+		
+		</Page:area>
+		
+</content>

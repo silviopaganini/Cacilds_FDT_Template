@@ -1,0 +1,45 @@
+/*Button
+{
+	font-family: HelveticaNeue;
+	font-size: 14px;
+	color: #333333;
+	selectable: false;
+	multiline:false;
+	embedFonts : true;
+	autoSize: left;
+	wordWrap: false;
+	text-align: left;
+	antiAliasType : advanced;
+	sharpness: -200;
+	thickness: 200;
+}
+
+SubButton
+{
+	font-family: HelveticaNeue;
+	font-size: 11px;
+	color: #FFFFFF;
+	selectable: false;
+	multiline:false;
+	embedFonts : true;
+	autoSize: left;
+	wordWrap: false;
+	text-align: left;
+}
+
+Area_Title
+{
+	font-family: HelveticaNeue;
+	italic: true;
+	font-size: 24px;
+	color: #000000;
+	selectable: false;
+	multiline:false;
+	embedFonts : true;
+	autoSize: left;
+	wordWrap: false;
+	text-align: left;
+	antiAliasType : advanced;
+}
+
+*/
