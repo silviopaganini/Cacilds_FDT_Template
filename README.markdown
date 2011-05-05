@@ -14,4 +14,4 @@ Next time you start a new FDT project you will be able to see this <img src="htt
 Just setup your project and have fun
 
 <br><br>
-A more detailed tutorial can be found here <a href="http://fdt.powerflasher.com/docs/Project_Templates" target="_blank">http://fdt.powerflasher.com/docs/Project_Templates</a> 
+A more detailed tutorial about FDT Templates can be found here <a href="http://fdt.powerflasher.com/docs/Project_Templates" target="_blank">http://fdt.powerflasher.com/docs/Project_Templates</a> 
