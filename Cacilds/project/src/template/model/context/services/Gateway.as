@@ -1,4 +1,4 @@
-package template.model.context.services
+package ${namespace}.model.context.services
 {
 	import cacilds.core.Config;
 	import flash.events.NetStatusEvent;
@@ -6,7 +6,7 @@ package template.model.context.services
 	import flash.net.ObjectEncoding;
 	import flash.net.Responder;
 	import org.robotlegs.mvcs.Actor;
-	import template.model.context.events.GatewayEvent;
+	import ${namespace}.model.context.events.GatewayEvent;
 
 
 

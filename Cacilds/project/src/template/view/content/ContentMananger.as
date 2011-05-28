@@ -1,4 +1,4 @@
-package template.view.content
+package ${namespace}.view.content
 {
 	import cacilds.core.ISetup;
 	import cacilds.display.UIElement;

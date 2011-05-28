@@ -1,7 +1,7 @@
-package template.controller
+package ${namespace}.controller
 {
-	import template.view.mediators.ContentMediator;
-	import template.view.content.ContentMananger;
+	import ${namespace}.view.mediators.ContentMediator;
+	import ${namespace}.view.content.ContentMananger;
 	import org.robotlegs.mvcs.Command;
 
 	/**

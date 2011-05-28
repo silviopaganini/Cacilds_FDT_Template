@@ -1,6 +1,6 @@
-package template.model.context
+package ${namespace}.model.context
 {
-	import template.model.context.events.SizeEvent;
+	import ${namespace}.model.context.events.SizeEvent;
 
 	import org.robotlegs.mvcs.Actor;
 

@@ -1,12 +1,12 @@
 ﻿package
 {
-	import template.SiteContext;
+	import ${namespace}.SiteContext;
 
 	import flash.display.Sprite;
 	import flash.events.Event;
 
 	[Frame(factoryClass="FactoryClass")]
-	[SWF(backgroundColor="#FFFFFF", frameRate="31", width="960", height="550")]
+	${SWFMetaData}
 	
 	public class Main extends Sprite
 	{

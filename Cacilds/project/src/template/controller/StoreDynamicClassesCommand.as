@@ -1,4 +1,4 @@
-package template.controller
+package ${namespace}.controller
 {
 	import org.robotlegs.mvcs.Command;
 

@@ -1,10 +1,10 @@
-package template
+package ${namespace}
 {
-	import template.controller.CreateMediatorsCommand;
-	import template.controller.MapEventCommands;
-	import template.controller.MapModelsCommand;
-	import template.controller.StartupCommand;
-	import template.controller.StoreDynamicClassesCommand;
+	import ${namespace}.controller.CreateMediatorsCommand;
+	import ${namespace}.controller.MapEventCommands;
+	import ${namespace}.controller.MapModelsCommand;
+	import ${namespace}.controller.StartupCommand;
+	import ${namespace}.controller.StoreDynamicClassesCommand;
 
 	import org.robotlegs.base.ContextEvent;
 	import org.robotlegs.mvcs.Context;

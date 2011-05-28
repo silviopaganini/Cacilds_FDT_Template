@@ -1,7 +1,7 @@
-package template.view.mediators
+package ${namespace}.view.mediators
 {
-	import template.view.content.ContentMananger;
-	import template.model.context.events.SizeEvent;
+	import ${namespace}.view.content.ContentMananger;
+	import ${namespace}.model.context.events.SizeEvent;
 
 	import com.asual.swfaddress.SWFAddress;
 	import com.asual.swfaddress.SWFAddressEvent;

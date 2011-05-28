@@ -1,6 +1,6 @@
-package template.controller
+package ${namespace}.controller
 {
-	import template.view.content.ContentMananger;
+	import ${namespace}.view.content.ContentMananger;
 	import org.robotlegs.mvcs.Command;
 
 	/**

@@ -1,4 +1,4 @@
-package template.model.context.events
+package ${namespace}.model.context.events
 {
 	import flash.events.Event;
 	import flash.geom.Point;
