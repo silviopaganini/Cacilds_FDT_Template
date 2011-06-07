@@ -26,7 +26,7 @@
 			
 			<group label="HTML Wrapper">
 				
-				<variable name="wrapper" label="Create HTML Wrapper" default="false" type="boolean" />
+				<variable name="wrapper" label="Create HTML Wrapper" default="true" type="boolean" />
 				
 				<group label="More..." style="popupButton">
 				
@@ -46,6 +46,10 @@
 		
 		<expression name="namespace" value="concat('',(${domain}),'.',(${clientFolderName}),'.',(${projectFolderName}),'')" />
 		<expression name="projectNameBuild" value="concat('',(${projectName}),'')" />
+		
+		<!-- FOR ANT -->
+		<expression name="documentClassPath" value="concat('',(${domain}),'/',(${clientFolderName}),'/',(${projectFolderName}),'')" />
+		<expression name="swfRelease" value="concat('',(${outputFolder}),'/swf')" />
 		
 		<expression name="SWFMetaData" value="concat('[SWF(backgroundColor=&quot;',(${color}),'&quot;, frameRate=&quot;',(${fps}),'&quot;, width=&quot;',(${width}),'&quot;, height=&quot;', (${height}),'&quot;)]')" />
 		
@@ -67,8 +71,8 @@
 		
 		<!-- IF WRAPPER -->
 		<folder src="bin" dest="bin" recursive="true" process="true" if="${wrapper}"/>
-
-		<file src="swc/cacilds_v02.swc" dest="swc/cacilds_v02.swc" />
+		
+		<file src="swc/cacilds.swc" dest="swc/cacilds.swc" />
 		<file src="swc/greensock.swc" dest="swc/greensock.swc" />
 		<file src="swc/robotlegs-framework-v1.4.0.swc" dest="swc/robotlegs-framework-v1.4.0.swc" />
 		<file src="swc/SWFAddress.swc" dest="swc/SWFAddress.swc" />

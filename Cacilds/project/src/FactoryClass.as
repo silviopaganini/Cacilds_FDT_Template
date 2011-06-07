@@ -15,6 +15,7 @@ package
 	import flash.display.StageScaleMode;
 	import flash.text.StyleSheet;
 	import flash.utils.getDefinitionByName;
+	import flash.utils.Dictionary;
 
 	/**
 	 * @author silvio paganini | s2paganini.com
@@ -80,7 +81,19 @@ package
 
 		protected function completeHandler(event : LoaderEvent) : void
 		{
-			Config.mainXML = queue.getContent("xmlDoc") as XML;
+			var loadedXML : XML = queue.getContent("xmlDoc") as XML;
+			Config.values = new Dictionary(false);
+			var v : XMLList = loadedXML..variables.children();
+
+			// GET VARIABLES
+			for(var n : String in v) Config.values[v[n].@name.toString()] = v[n];
+
+			// REPLACE VARIABLES
+			var tempXML : String = loadedXML.toString();
+			for(var a : String in Config.values) tempXML = tempXML.split(a).join(Config.values[a]);
+
+			// STORE CORE OBJECTS
+			Config.mainXML = new XML(tempXML);
 			Config.mainCSS = queue.getContent("css") as StyleSheet;
 			onCompleteLoading();
 		}

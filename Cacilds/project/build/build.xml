@@ -10,7 +10,7 @@
 			compilerarguments="${build.settings}"
 			mainclass="${basedir}/${build.documentclass}"
 			debug="true"
-			target="${basedir}/${build.deployFolder}/${build.compiledswf}"
+			target="${basedir}/${build.swfFolder}/${build.compiledswf}"
 			autoaddswcs="true"
 			startswf="true"
 			swflauncher="Adobe Flash Player" />
@@ -24,7 +24,7 @@
 			compilerarguments="${build.settings}"
 			mainclass="${basedir}/${build.documentclass}"
 			debug="false"
-			target="${basedir}/${build.deployFolder}/${build.compiledswf}"
+			target="${basedir}/${build.swfFolder}/${build.compiledswf}"
 			autoaddswcs="true"
 			startswf="true"
 			swflauncher="Adobe Flash Player" />
@@ -82,86 +82,13 @@
 					compilerarguments="${build.settings}"
 					mainclass="${basedir}/${build.documentclass}"
 					debug="false"
-					target="${basedir}/${build.deployFolder}/${build.compiledswf}"
+					target="${basedir}/${build.swfFolder}/${build.compiledswf}"
 					autoaddswcs="true"
-					startswf="false"
-					swflauncher="Adobe Flash Player" />
-				
-		<copy file="${basedir}/${build.deployFolder}/${build.compiledswf}" todir="${basedir}../../../../website/flash/swf/"/>
-		
+					startswf="false" />
+			
 		<exec executable="open">
 			<arg line="${localServer.URL}" />
 		</exec>
-	</target>
-
-	<!-- SETUP -->
-	<target name="0. Setup">
-
-		<copy file="${basedir}/${template.html}" tofile="${basedir}/${build.deployFolder}/${template.htmlName}.html" />
-		<copy file="${basedir}/${template.main}" tofile="${basedir}/${build.documentclass}" />
-
-		<mkdir dir="${basedir}/${build.deployFolder}/${build.swfFolder}"/>
-
-		<!-- SEARCH & REPLACE HTML -->
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.deployFolder}" />
-			<regexp pattern="%title" />
-			<substitution expression="${project.title}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.deployFolder}" />
-			<regexp pattern="%backgroundcolor" />
-			<substitution expression="${project.backgroundColor}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.deployFolder}" />
-			<regexp pattern="%swf_path" />
-			<substitution expression="${build.compiledswf}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.deployFolder}" />
-			<regexp pattern="%swf_width" />
-			<substitution expression="${project.width}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.deployFolder}" />
-			<regexp pattern="%swf_height" />
-			<substitution expression="${project.height}" />
-		</replaceregexp>
-
-		<!-- SEARCH AND REPLACE MAIN CLASS -->
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.source}" />
-			<regexp pattern="%title" />
-			<substitution expression="${project.title}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.source}" />
-			<regexp pattern="%backgroundcolor" />
-			<substitution expression="${project.backgroundColor}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.source}" />
-			<regexp pattern="%swf_width" />
-			<substitution expression="${project.width}" />
-		</replaceregexp>
-
-		<replaceregexp flags="-g">
-			<fileset dir="${basedir}/${build.source}" />
-			<regexp pattern="%swf_height" />
-			<substitution expression="${project.height}" />
-		</replaceregexp>
-	</target>
-
-	<!-- Clean folder to Upload -->
-	<target name="4. Clean folder to upload">
-		<delete dir="${basedir}/toUpload" />
 	</target>
 
 </project>
