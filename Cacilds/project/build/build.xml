@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Default AnT" default="1. Debug App" basedir="../">
+<project name="${projectNameBuild} ANT" default="1. Debug App" basedir="../">
 	<!-- Load project.properties file -->
 	<property file="build/build.properties" />
 

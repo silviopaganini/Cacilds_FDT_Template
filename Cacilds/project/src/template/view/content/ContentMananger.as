@@ -16,7 +16,7 @@ package ${namespace}.view.content
 		{
 		}
 
-		public function setup() : void
+		public function setup(data : Object = null) : void
 		{
 		}
 	}
