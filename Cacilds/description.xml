@@ -61,7 +61,7 @@
 		<outputFolder>${outputFolder}</outputFolder>
 		<autoLibFolder>swc</autoLibFolder>
 	</folders>
-	<contentCreation processFileExtensions="as,mxml,xml,launch,html,properties">
+	<contentCreation processFileExtensions="as,mxml,xml,launch,html,properties,js,css">
 		
 		<!-- Always -->
 		<folder src="src/template" dest="${sourceFolder}/${domain}/${clientFolderName}/${projectFolderName}" recursive="true" process="true"/>

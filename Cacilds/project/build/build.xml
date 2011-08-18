@@ -81,7 +81,7 @@
 					projectname="${project.name}"
 					compilerarguments="${build.settings}"
 					mainclass="${basedir}/${build.documentclass}"
-					debug="false"
+					debug="true"
 					target="${basedir}/${build.swfFolder}/${build.compiledswf}"
 					autoaddswcs="true"
 					startswf="false" />

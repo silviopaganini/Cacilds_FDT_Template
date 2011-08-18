@@ -1,69 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
-    <!-- 
-    Smart developers always View Source. 
-    
-    This application was built using Adobe Flex, an open source framework
-    for building rich Internet applications that get delivered via the
-    Flash Player or to desktops via Adobe AIR. 
-    
-    Learn more about Flex at http://flex.org 
-    // -->
+<html> 
+   
     <head>
-        <title></title>
+        <title>${pageTitle}</title>
+
+        <!-- META -->
         <meta name="google" value="notranslate">         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="cache-control" content="no-cache" />
+
+        <!-- MAIN CSS -->
        
-        <style type="text/css" media="screen"> 
-            html, body  { height:100%; }
-            body { margin:0; padding:0; overflow:auto; text-align:center; 
-                   background-color: #ffffff; }   
-            object:focus { outline:none; }
-            #flashContent { display:none; }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+        <!-- JS -->
             
         <script type="text/javascript" src="js/swfobject.js"></script>
 		<script type="text/javascript" src="js/swfaddress.js"></script>
-        <script type="text/javascript">
-            // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var swfVersionStr = "10.1.0";
-            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
-            var xiSwfUrlStr = "swf/playerProductInstall.swf";
-            var flashvars = {
-            		xmlPath   : "data/content.xml",
-            		cssPath   : "data/styles.css",
-            		fontsPath : "swf/font.swf"
-            };
-            var params = {};
-            params.quality = "high";
-            params.bgcolor = "#ffffff";
-            params.allowscriptaccess = "sameDomain";
-            params.allowfullscreen = "true";
-            var attributes = {};
-            attributes.id = "Main";
-            attributes.name = "Main";
-            attributes.align = "middle";
-            swfobject.embedSWF(
-                "swf/Main.swf", "flashContent", 
-                "100%", "100%", 
-                swfVersionStr, xiSwfUrlStr, 
-                flashvars, params, attributes);
+        <script type="text/javascript" src="js/main.js"></script>
 
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
-        </script>
     </head>
     <body>
         
         <div id="flashContent">
             <p>
-                To view this page ensure that Adobe Flash Player version 
-                10.1.0 or greater is installed. 
+                To view this page ensure that Adobe Flash Player version 10.1.0 or greater is installed. 
             </p>
             <script type="text/javascript"> 
                 var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
-                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" 
-                                + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
+                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
             </script> 
         </div>
    </body>
