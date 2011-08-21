@@ -8,10 +8,10 @@ var flashvars = {
 };
 
 var params = {
-    quality             : "best";
-    bgcolor             : "#ffffff";
-    allowscriptaccess   : "sameDomain";
-    allowfullscreen     : "true";
+    quality             : "best",
+    bgcolor             : "${htmlColor}",
+    allowscriptaccess   : "sameDomain",
+    allowfullscreen     : "true"
 };
 
 var attributes = {
