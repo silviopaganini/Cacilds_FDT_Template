@@ -15,9 +15,9 @@ var params = {
 };
 
 var attributes = {
-    id      : "Main";
-    name    : "Main";
-    align   : "middle";
+    id      : "Main",
+    name    : "Main",
+    align   : "middle"
 };
 swfobject.embedSWF(
     "swf/${projectNameBuild}.swf", "flashContent", 
