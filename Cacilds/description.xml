@@ -25,6 +25,8 @@
 			</group>
 			
 			<group label="HTML Wrapper">
+
+				<variable name="browserTest" label="Default Browser to Test:" default="Chrome" type="enum('Safari','Chrome','Firefox')" />
 				
 				<variable name="wrapper" label="Create HTML Wrapper" default="true" type="boolean" />
 				
