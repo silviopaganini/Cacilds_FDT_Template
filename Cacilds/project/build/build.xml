@@ -87,6 +87,7 @@
 					startswf="false" />
 			
 		<exec executable="open">
+			<arg line="${browser.args}" />
 			<arg line="${localServer.URL}" />
 		</exec>
 	</target>
