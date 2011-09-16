@@ -100,6 +100,8 @@ package
 
 		protected function onCompleteLoading() : void
 		{
+			nextFrame();
+			
 			var MainClass : Class = Class(getDefinitionByName("Main"));
 
 			if (MainClass) {
